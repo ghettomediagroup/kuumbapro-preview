@@ -85,23 +85,25 @@
     </div>
 
     <div class="reset" id="resetModule">
-      <div class="reset-head">
-        <div>
-          <p class="eyebrow" style="margin-bottom:.3rem">Joy Up 30 Second Joy Reset&trade;</p>
-          <h3 style="margin:0">Five steps. Go at your own pace.</h3>
+      <div class="reset-sticky">
+        <div class="reset-head">
+          <div>
+            <p class="eyebrow" style="margin-bottom:.3rem">Joy Up 30 Second Joy Reset&trade;</p>
+            <h3 style="margin:0">Five steps. Go at your own pace.</h3>
+          </div>
+          <div class="btn-row" style="margin:0">
+            <button class="btn btn-gold btn-sm" id="resetBegin" type="button">Begin</button>
+            <button class="btn btn-ghost btn-sm" id="resetStop" type="button" hidden>Start over</button>
+          </div>
         </div>
-        <div class="btn-row" style="margin:0">
-          <button class="btn btn-gold btn-sm" id="resetBegin" type="button">Begin</button>
-          <button class="btn btn-ghost btn-sm" id="resetStop" type="button" hidden>Start over</button>
-        </div>
-      </div>
 
-      <div class="reset-dial" role="timer" aria-live="off">
-        <svg viewbox="0 0 210 210" aria-hidden="true">
-          <circle class="track" cx="105" cy="105" r="95"></circle>
-          <circle class="prog" cx="105" cy="105" r="95" id="resetProg"></circle>
-        </svg>
-        <div class="reset-count" id="resetCount">30<small>seconds</small></div>
+        <div class="reset-dial" role="timer" aria-live="off">
+          <svg viewbox="0 0 210 210" aria-hidden="true">
+            <circle class="track" cx="105" cy="105" r="95"></circle>
+            <circle class="prog" cx="105" cy="105" r="95" id="resetProg"></circle>
+          </svg>
+          <div class="reset-count" id="resetCount">30<small>seconds</small></div>
+        </div>
       </div>
 
       <ol class="reset-steps" id="resetSteps">

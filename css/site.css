@@ -245,12 +245,12 @@ section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
   box-shadow: var(--shadow);
 }
 .reset-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem; justify-content: space-between; }
-.reset-dial { display: grid; place-items: center; margin: 1.75rem auto 1.25rem; position: relative; width: 210px; height: 210px; }
+.reset-dial { display: grid; place-items: center; margin: 1rem auto .5rem; position: relative; width: 160px; height: 160px; }
 .reset-dial svg { position: absolute; inset: 0; transform: rotate(-90deg); }
 .reset-dial .track { fill: none; stroke: var(--line); stroke-width: 8; }
 .reset-dial .prog  { fill: none; stroke: var(--gold); stroke-width: 8; stroke-linecap: round;
   stroke-dasharray: 597; stroke-dashoffset: 597; transition: stroke-dashoffset .3s linear; }
-.reset-count { font-family: var(--serif); font-size: 3.2rem; line-height: 1; }
+.reset-count { font-family: var(--serif); font-size: 2.5rem; line-height: 1; }
 .reset-count small { display: block; font-family: var(--sans); font-size: .68rem;
   letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-top: .5rem; }
 .reset-steps { display: grid; gap: .55rem; margin: 1.5rem 0 0; padding: 0; list-style: none; counter-reset: s; }
@@ -400,4 +400,26 @@ body.live .flag { display: none; }
   -webkit-mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
           mask-image: linear-gradient(to bottom, #000 88%, transparent 100%);
   filter: drop-shadow(0 24px 40px rgba(26,23,19,.2));
+}
+
+/* The clock follows you down the steps. Requested by the client: he did not
+   want to lose sight of the thirty seconds while scrolling. Offset clears the
+   sticky site nav above it. */
+.reset-sticky {
+  position: sticky;
+  top: 64px;
+  z-index: 6;
+  background: color-mix(in srgb, var(--paper-2) 94%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  margin: -.5rem -.5rem .5rem;
+  padding: .75rem .5rem .25rem;
+  border-radius: var(--radius);
+  border-bottom: 1px solid var(--line);
+}
+@media (max-width: 620px) {
+  .reset-dial { width: 128px; height: 128px; }
+  .reset-count { font-size: 2rem; }
+  .reset-count small { font-size: .6rem; margin-top: .25rem; }
+  .reset-sticky { top: 60px; }
 }
