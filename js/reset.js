@@ -48,12 +48,17 @@
     b.className = 'btn btn-ghost btn-sm';
     b.style.marginTop = '.8rem';
     b.textContent = i === items.length - 1 ? 'Done' : 'Next';
-    b.addEventListener('click', function () { advance(i + 1); });
+    b.hidden = true;                       // no stepping before Begin
+    b.addEventListener('click', function () {
+      if (idx < 0) return;                 // ignore clicks on a session that never started
+      advance(i + 1);
+    });
     li.querySelector('div').appendChild(b);
     li.dataset.hasBtn = '1';
   });
 
   function advance(next) {
+    if (idx < 0) return;                   // not started
     idx = next;
     if (idx >= items.length) return finish();
     paint();
@@ -65,8 +70,8 @@
     if (left <= 0) {
       left = 0;
       ring(1);
-      label(0, 'seconds');
       clearInterval(timer); timer = null;
+      finish();                            // sitting through the 30s IS completing it
       return;
     }
     ring((TOTAL - left) / TOTAL);
@@ -78,6 +83,7 @@
     begin.hidden = true;
     stop.hidden = false;
     done.hidden = true;
+    items.forEach(function (li) { var b = li.querySelector('button'); if (b) b.hidden = false; });
     idx = 0; paint();
     timer = setInterval(tick, 1000);
   }
@@ -86,6 +92,7 @@
     if (timer) { clearInterval(timer); timer = null; }
     items.forEach(function (li) { li.classList.remove('active'); li.classList.add('done'); });
     done.hidden = false;
+    done.setAttribute('role', 'status');
     label('✓', 'complete');
     ring(1);
     done.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -96,7 +103,10 @@
     left = TOTAL; idx = -1;
     ring(0);
     label(TOTAL, 'seconds');
-    items.forEach(function (li) { li.classList.remove('active', 'done'); });
+    items.forEach(function (li) {
+      li.classList.remove('active', 'done');
+      var b = li.querySelector('button'); if (b) b.hidden = true;
+    });
     done.hidden = true;
     if (!keepButtons) { begin.hidden = false; stop.hidden = true; }
   }
