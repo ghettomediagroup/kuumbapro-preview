@@ -15,6 +15,17 @@
 <link rel="canonical" href="https://www.kuumbapro.org/trademarks.html">
 <link rel="stylesheet" href="/kuumbapro-preview/css/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23C98A2E'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' font-weight='700' fill='%2316130F'>K</text></svg>">
+<link rel="apple-touch-icon" href="/kuumbapro-preview/assets/pwa/icon-180.png">
+<link rel="manifest" href="/kuumbapro-preview/manifest.webmanifest">
+<meta name="application-name" content="Joy Up">
+<meta name="apple-mobile-web-app-title" content="Joy Up">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:image" content="/kuumbapro-preview/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/kuumbapro-preview/assets/og-cover.png">
 </head>
 <body class="" data-slug="trademarks">
 <a class="skip" href="#main">Skip to content</a>
@@ -183,6 +194,13 @@
   if (slug) {
     var cur = document.querySelector('.nav-links a[data-slug="' + slug + '"]');
     if (cur) cur.setAttribute('aria-current', 'page');
+  }
+  // Register the service worker for offline + installability.
+  // Fails silently on file:// or on browsers without SW support.
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    });
   }
 })();
 </script>

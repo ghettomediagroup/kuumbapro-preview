@@ -1,0 +1,50 @@
+{
+  "name": "Joy Up — Kuumba, LLC",
+  "short_name": "Joy Up",
+  "description": "The Joy Up 30 Second Joy Reset. A self-regulation practice from Dr. Harvey Hinton III and Kuumba, LLC.",
+  "start_url": "/kuumbapro-preview/",
+  "scope": "/kuumbapro-preview/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FBF8F3",
+  "theme_color": "#1A1713",
+  "categories": ["health", "wellness", "lifestyle", "education"],
+  "icons": [
+    {
+      "src": "/kuumbapro-preview/assets/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/kuumbapro-preview/assets/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/kuumbapro-preview/assets/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Do the 30 second reset",
+      "short_name": "Reset",
+      "url": "/kuumbapro-preview/practice.html",
+      "description": "Ground, Breathe, Smile, Laugh, Release."
+    },
+    {
+      "name": "The JEBBEDIAH Way",
+      "short_name": "JEBBEDIAH",
+      "url": "/kuumbapro-preview/jebbediah.html"
+    },
+    {
+      "name": "Get the guide",
+      "short_name": "Guide",
+      "url": "/kuumbapro-preview/guide.html"
+    }
+  ]
+}
