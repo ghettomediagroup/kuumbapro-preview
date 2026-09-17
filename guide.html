@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KuumbaPro">
 <link rel="canonical" href="https://www.kuumbapro.org/guide.html">
-<link rel="stylesheet" href="/kuumbapro-preview/css/site.css?v=202609161426">
+<link rel="stylesheet" href="/kuumbapro-preview/css/site.css?v=202609162051">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23C98A2E'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' font-weight='700' fill='%2316130F'>K</text></svg>">
 <link rel="icon" type="image/png" sizes="16x16" href="/kuumbapro-preview/assets/pwa/favicon-16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/kuumbapro-preview/assets/pwa/favicon-32.png">
@@ -53,7 +53,10 @@
       <a href="/kuumbapro-preview/about.html" data-slug="about">About</a>
       <a href="/kuumbapro-preview/watch.html" data-slug="watch">Watch</a>
       <a href="/kuumbapro-preview/book.html" data-slug="book">Book a Call</a>
+      <a href="/kuumbapro-preview/library.html" data-slug="library">Library</a>
+      <a href="/kuumbapro-preview/live.html" data-slug="live">Live</a>
       <a class="btn btn-gold btn-sm" href="/kuumbapro-preview/guide.html" data-slug="guide">Get the Guide</a>
+      <a href="/kuumbapro-preview/login.html" data-slug="login">Members</a>
     </nav>
   </div>
 </header>
@@ -76,10 +79,35 @@
           <em>Joy Up 30 Second Joy Reset&trade;: An Entry Point into the JEBBEDIAH Way.</em>
           With a reflection and a practice for each principle.
         </p>
-        <div class="btn-row" style="margin-top:1.5rem">
-          <a class="btn btn-primary" href="mailto:hhinton@kuumballc.org?subject=Send%20me%20the%20Joy%20Up%20guide">Email me the guide</a>
-        </div>
-        <p class="form-note">One email a week after that: one principle, one question, one practice. Nothing else. Unsubscribe any time. See our <a href="/kuumbapro-preview/privacy.html" style="color:var(--gold-text)">Privacy Policy</a>.</p>
+        <form class="kit-form" action="https://app.kit.com/forms/PLACEHOLDER/subscriptions" method="post" data-sv-form="PLACEHOLDER" data-uid="PLACEHOLDER" data-format="inline" data-version="5" style="margin-top:1.5rem">
+          <p class="eyebrow" style="margin-bottom:.4rem">The weekly practice</p>
+          <p style="color:var(--ink-2);margin-top:0">
+            One quiet note each week from Dr. Harvey Hinton III. A short JEBBEDIAH reflection, one grounded
+            practice, and the next Joy Up 30 Second Joy Reset&trade; for the moment you need it.
+          </p>
+          <div class="form-row">
+            <label class="sr-only" for="kit-first">First name</label>
+            <input id="kit-first" name="fields[first_name]" type="text" autocomplete="given-name" placeholder="First name" required>
+          </div>
+          <div class="form-row">
+            <label class="sr-only" for="kit-email">Email address</label>
+            <input id="kit-email" name="email_address" type="email" autocomplete="email" placeholder="Email address" required>
+          </div>
+          <div class="btn-row" style="margin-top:1rem">
+            <button class="btn btn-primary" type="submit">Send me the guide</button>
+          </div>
+          <p class="form-note" style="margin-top:1rem">
+            By subscribing, you agree to receive one email per week from Joy Up&trade;. You can unsubscribe at
+            any time using the link at the bottom of every message. See our
+            <a href="/kuumbapro-preview/privacy.html" style="color:var(--gold-text)">Privacy Policy</a> and
+            <a href="/kuumbapro-preview/terms.html" style="color:var(--gold-text)">Terms</a> for how your information is
+            stored and used. Joy Up&trade; is a general wellness practice, not medical or mental health care.
+          </p>
+        </form>
+
+        <p style="margin-top:1rem;font-size:.9rem;color:var(--ink-3)">
+          Prefer email? Write to <a href="mailto:hhinton@kuumballc.org?subject=Send%20me%20the%20Joy%20Up%20guide" style="color:var(--gold-text)">hhinton@kuumballc.org</a> and Dr. Hinton will send the guide directly.
+        </p>
         
       </div>
       <div>
@@ -221,5 +249,12 @@
 })();
 </script>
 
+
+<script src="/kuumbapro-preview/js/player.js?v=202609162051" defer></script>
+
+<!--
+TODO Phase 2. Uncomment this MemberSpace embed once Dr. Hinton creates the MemberSpace account and provides the site subdomain. Replace YOUR_SUBDOMAIN in the src URL with the real MemberSpace subdomain. See CLIENT-BLOCKERS.md.
+<script>(function(d){var s=d.createElement('script');s.setAttribute('data-memberspace-sub','YOUR_SUBDOMAIN');s.src='https://cdn.memberspace.com/scripts/widgets.js';var e=d.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e);})(document);</script>
+-->
 </body>
 </html>

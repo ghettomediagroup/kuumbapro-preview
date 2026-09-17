@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KuumbaPro//Joy Up Weekly Drop In//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:joy-up-weekly-dropin@kuumbapro.com
+DTSTAMP:20260916T120000Z
+DTSTART:20260923T230000Z
+DTEND:20260923T233000Z
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Joy Up 30 Second Joy Reset (TM) Weekly Drop In
+LOCATION:Zoom (link provided to signed-in members on the drop-in page)
+DESCRIPTION:Weekly live session hosted by JEBBEDIAH. Show up as you are. No performance required\, no camera required.\n\nSessions are recorded and posted to the library within 48 hours.\n\nSigned-in members will find this week's Zoom link on https://kuumbapro.com/live.html.
+URL:https://kuumbapro.com/live.html
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+SEQUENCE:0
+END:VEVENT
+END:VCALENDAR

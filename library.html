@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Medical Disclaimer & Safety | KuumbaPro</title>
-<meta name="description" content="Joy Up is a general wellness practice, not medical or mental health care. Read who should speak with a doctor first, and how to get help now.">
+<title>Session Library | KuumbaPro | Dr. Harvey Hinton III</title>
+<meta name="description" content="On-demand session library for KuumbaPro members. Weekly sessions with Dr. Harvey Hinton III on the JEBBEDIAH Way. Sign in or join to watch.">
 
 <meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="Medical Disclaimer & Safety | KuumbaPro">
-<meta property="og:description" content="Joy Up is a general wellness practice, not medical or mental health care. Read who should speak with a doctor first, and how to get help now.">
+<meta property="og:title" content="Session Library | KuumbaPro | Dr. Harvey Hinton III">
+<meta property="og:description" content="On-demand session library for KuumbaPro members. Weekly sessions with Dr. Harvey Hinton III on the JEBBEDIAH Way. Sign in or join to watch.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KuumbaPro">
-<link rel="canonical" href="https://www.kuumbapro.org/disclaimer.html">
+<link rel="canonical" href="https://www.kuumbapro.org/library.html">
 <link rel="stylesheet" href="/kuumbapro-preview/css/site.css?v=202609162051">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23C98A2E'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' font-weight='700' fill='%2316130F'>K</text></svg>">
 <link rel="icon" type="image/png" sizes="16x16" href="/kuumbapro-preview/assets/pwa/favicon-16.png">
@@ -33,7 +33,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="/kuumbapro-preview/assets/og-cover.png">
 </head>
-<body class="" data-slug="disclaimer">
+<body class="" data-slug="library">
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="nav">
@@ -62,86 +62,121 @@
 </header>
 
 <main id="main">
+<!--
+  /library.html: Session library. Signed-in members watch full sessions.
+  Cards render in their real state. Each locked card carries its own
+  Sign in / Join CTA, so keyboard and screen-reader users get a coherent
+  per-card flow instead of a fake modal covering a hidden grid.
+
+  When the viewer is signed in, MemberSpace (or the site auth layer)
+  should swap each .card-lock block for the actual .card-play block that
+  links to the session page. The static markup below defaults to the
+  locked state so nothing leaks before auth resolves.
+-->
 <div class="page-head">
   <div class="wrap">
-    <p class="eyebrow">Please read before you begin</p>
-    <h1>Disclaimer and safety</h1>
+    <p class="eyebrow">Session library</p>
+    <h1>Watch on your own time.</h1>
+    <p class="lede">
+      Full sessions from Dr. Harvey Hinton III, kept here so you can return to them when you need to.
+      No live schedule to keep. Nothing to catch up on all at once.
+    </p>
   </div>
 </div>
 
-<section>
+<section aria-labelledby="lib-sessions-heading">
   <div class="wrap">
-    <div class="prose">
+    <h2 id="lib-sessions-heading" class="section-heading">Recent sessions</h2>
+    <p class="section-note">Member access is required to watch. Not signed in? Use the buttons on any card below.</p>
 
-      <div class="disclaimer crisis" style="margin-bottom:2.5rem">
-        <p style="margin:0 0 .6rem"><strong>If you are experiencing a medical emergency, thoughts of harming
-        yourself or others, or distress that feels unmanageable, stop and get help now.</strong></p>
-        <p style="margin:0">
-          In the United States, call or text <a href="tel:988" style="color:var(--gold-text);font-weight:700">988</a>
-          for the Suicide and Crisis Lifeline, or call <a href="tel:911" style="color:var(--gold-text);font-weight:700">911</a>.<br>
-          Crisis Text Line: text <strong>HOME</strong> to <a href="sms:741741" style="color:var(--gold-text)">741741</a>.<br>
-          Veterans Crisis Line: call <a href="tel:988" style="color:var(--gold-text)">988</a>, then press 1.<br>
-          SAMHSA National Helpline: <a href="tel:18006624357" style="color:var(--gold-text)">1-800-662-4357</a>.
-        </p>
-      </div>
+    <div class="grid grid-3">
 
-      <h2 style="margin-top:0">What this is</h2>
-      <p>
-        Joy Up&trade; is a general wellness and personal reflection practice. It is not a medical device, and it
-        does not provide medical advice, diagnosis, or treatment.
-      </p>
-      <p>
-        The Joy Up 30 Second Joy Reset&trade; is a non-clinical, supportive practice. It does not replace clinical
-        care or crisis intervention, medical care, mental health treatment, or emergency support. It is not a
-        substitute for professional medical advice, diagnosis, or treatment.
-      </p>
-      <blockquote>
-        <p>&ldquo;Laughter is not a replacement for you to go see your doctor and seeking the medical help that
-        you need. If you are experiencing pain or any discomfort, you may need to stop and go seek medical
-        treatment.&rdquo;</p>
-        <p style="font-family:var(--sans);font-size:.85rem;color:var(--ink-3)">Dr. Harvey Hinton III</p>
-      </blockquote>
+      <article class="card session-card">
+        <div class="video video-thumb" aria-hidden="true">
+          <svg width="30" height="30" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="11" style="fill:none;stroke:var(--line-strong);stroke-width:1.5"></circle>
+            <path d="M10 8.4L16.5 12L10 15.6V8.4Z" style="fill:var(--gold-2)"></path>
+          </svg>
+        </div>
+        <h3 class="session-title">Joy is Regulation</h3>
+        <p class="session-meta">22 min. Sunday, Sept 13, 2026.</p>
+        <p>What the Joy Up 30 Second Joy Reset (TM) looks like as a weekly rhythm, and how JEBBEDIAH walks through it in a session.</p>
+        <div class="card-lock">
+          <p class="lock-note">Member sign in required.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="/kuumbapro-preview/login.html" aria-label="Sign in to watch Joy is Regulation">Sign in</a>
+            <a class="btn btn-gold btn-sm" href="/kuumbapro-preview/members.html" aria-label="Join to watch Joy is Regulation">Join</a>
+          </div>
+        </div>
+      </article>
 
-      <h2>Before you practice</h2>
-      <p>
-        This practice involves breathing, gentle movement, and sustained voluntary laughter.
-        <strong>Stop immediately if you feel pain, dizziness, lightheadedness, shortness of breath, or any
-        discomfort.</strong>
-      </p>
-      <p>Talk with your doctor before you begin if you have:</p>
-      <ul>
-        <li>a hernia</li>
-        <li>urinary incontinence</li>
-        <li>any active bleeding</li>
-        <li>a heart condition, or chest pain during exertion</li>
-        <li>epilepsy or a history of seizures</li>
-        <li>severe back pain or a slipped disc</li>
-        <li>uncontrolled high blood pressure</li>
-        <li>a pregnancy with a history of miscarriage, or a pregnancy in its last two months</li>
-        <li>major surgery within the last three months</li>
-      </ul>
-      <p style="color:var(--ink-3);font-size:.94rem">
-        Some people notice mild headache or throat irritation afterward. Practice gently rather than forcefully,
-        and drink water.
-      </p>
+      <article class="card session-card">
+        <div class="video video-thumb" aria-hidden="true">
+          <svg width="30" height="30" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="11" style="fill:none;stroke:var(--line-strong);stroke-width:1.5"></circle>
+            <path d="M10 8.4L16.5 12L10 15.6V8.4Z" style="fill:var(--gold-2)"></path>
+          </svg>
+        </div>
+        <h3 class="session-title">Belonging as a Practice</h3>
+        <p class="session-meta">27 min. Sunday, Sept 6, 2026.</p>
+        <p>Belonging built through small, honest choices in a room. Not proving your worth to it.</p>
+        <div class="card-lock">
+          <p class="lock-note">Member sign in required.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="/kuumbapro-preview/login.html" aria-label="Sign in to watch Belonging as a Practice">Sign in</a>
+            <a class="btn btn-gold btn-sm" href="/kuumbapro-preview/members.html" aria-label="Join to watch Belonging as a Practice">Join</a>
+          </div>
+        </div>
+      </article>
 
-      <h2>Practice somewhere safe</h2>
-      <p>
-        Do not practice while driving or operating machinery. If you practice outdoors or while walking,
-        stay aware of your surroundings.
-      </p>
+      <article class="card session-card">
+        <div class="video video-thumb" aria-hidden="true">
+          <svg width="30" height="30" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="11" style="fill:none;stroke:var(--line-strong);stroke-width:1.5"></circle>
+            <path d="M10 8.4L16.5 12L10 15.6V8.4Z" style="fill:var(--gold-2)"></path>
+          </svg>
+        </div>
+        <h3 class="session-title">The Discernment Ladder</h3>
+        <p class="session-meta">19 min. Sunday, Aug 30, 2026.</p>
+        <p>A way to sort what is yours to carry, what is yours to release, and what only needs to be named.</p>
+        <div class="card-lock">
+          <p class="lock-note">Member sign in required.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="/kuumbapro-preview/login.html" aria-label="Sign in to watch The Discernment Ladder">Sign in</a>
+            <a class="btn btn-gold btn-sm" href="/kuumbapro-preview/members.html" aria-label="Join to watch The Discernment Ladder">Join</a>
+          </div>
+        </div>
+      </article>
 
-      <h2>Age</h2>
-      <p>This site and the Joy Up practice are intended for people 13 and older.</p>
+      <article class="card session-card">
+        <div class="video video-thumb" aria-hidden="true">
+          <svg width="30" height="30" viewbox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="11" style="fill:none;stroke:var(--line-strong);stroke-width:1.5"></circle>
+            <path d="M10 8.4L16.5 12L10 15.6V8.4Z" style="fill:var(--gold-2)"></path>
+          </svg>
+        </div>
+        <h3 class="session-title">Moving Toward, Not Arriving</h3>
+        <p class="session-meta">31 min. Sunday, Aug 23, 2026.</p>
+        <p>Progress framed as a direction you move toward, not a finish line you cross.</p>
+        <div class="card-lock">
+          <p class="lock-note">Member sign in required.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="/kuumbapro-preview/login.html" aria-label="Sign in to watch Moving Toward, Not Arriving">Sign in</a>
+            <a class="btn btn-gold btn-sm" href="/kuumbapro-preview/members.html" aria-label="Join to watch Moving Toward, Not Arriving">Join</a>
+          </div>
+        </div>
+      </article>
 
-      
-      
-
-      <h2>Questions</h2>
-      <p>
-        Kuumba, LLC &middot; <a href="mailto:hhinton@kuumballc.org" style="color:var(--gold-text)">hhinton@kuumballc.org</a>
-      </p>
     </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="lib-cadence-heading">
+  <div class="wrap" style="text-align:center">
+    <h2 id="lib-cadence-heading" class="section-heading">New sessions drop weekly on Sundays.</h2>
+    <p style="color:var(--ink-3);font-size:.92rem">
+      <a href="/kuumbapro-preview/members.html" style="color:var(--gold-text)">See what membership includes</a>.
+    </p>
   </div>
 </section>
 </main>

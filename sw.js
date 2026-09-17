@@ -3,7 +3,7 @@
  * visit works normally, subsequent visits load instantly from cache, and updates
  * take effect on the next navigation. The 30-second reset works offline too.
  */
-const VERSION = 'kuumba-v1';
+const VERSION = 'kuumba-v2';
 const APP_SHELL = [
   '/kuumbapro-preview/',
   '/kuumbapro-preview/practice.html',
@@ -18,8 +18,13 @@ const APP_SHELL = [
   '/kuumbapro-preview/trademarks.html',
   '/kuumbapro-preview/privacy.html',
   '/kuumbapro-preview/terms.html',
+  '/kuumbapro-preview/members.html',
+  '/kuumbapro-preview/login.html',
+  '/kuumbapro-preview/library.html',
+  '/kuumbapro-preview/live.html',
   '/kuumbapro-preview/css/site.css',
   '/kuumbapro-preview/js/reset.js',
+  '/kuumbapro-preview/js/player.js',
   '/kuumbapro-preview/assets/pwa/icon-192.png',
   '/kuumbapro-preview/assets/pwa/icon-512.png',
 ];
