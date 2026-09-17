@@ -1,0 +1,26 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "PLACEHOLDER_TEAM_ID.com.gmg.kuumbapro",
+        "paths": [
+          "/kuumbapro-preview/",
+          "/kuumbapro-preview/index.html",
+          "/kuumbapro-preview/practice.html",
+          "/kuumbapro-preview/jebbediah.html",
+          "/kuumbapro-preview/guide.html",
+          "/kuumbapro-preview/library.html",
+          "/kuumbapro-preview/library/*",
+          "/kuumbapro-preview/book.html",
+          "/kuumbapro-preview/privacy.html"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "PLACEHOLDER_TEAM_ID.com.gmg.kuumbapro"
+    ]
+  }
+}
